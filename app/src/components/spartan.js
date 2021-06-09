@@ -22,7 +22,9 @@ const Spartan = (props) => {
         <> 
             <div>
                 <h2>Say hello to: {gamertag} </h2>
+                <img src={gamertag.picture.medium} alt='Halo Spartan'/>
             </div>
+            <button onClick={handleClick}>Drop in Spartan</button>
         </>
     )
 }
