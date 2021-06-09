@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 
-import { fetchFail, fetchStart, fetchSuccess, getSpartan } from './../actions/index';
+import { getSpartan } from './../actions/index';
 
 const Spartan = (props) => {
     const { spartan, isFetching, error } = props;
     useEffect(() => {
         props.dispatch(getSpartan());
-    }, []);
+    }, );
     const handleClick = () => {
         props.dispatch(getSpartan());
     }
@@ -21,8 +21,8 @@ const Spartan = (props) => {
     return (
         <> 
             <div>
-                <h2>Say hello to: {gamertag} </h2>
-                <img src={gamertag.picture.medium} alt='Halo Spartan'/>
+                <h2>Say hello to: {spartan} </h2>
+                <img src={spartan} alt='Halo Spartan'/>
             </div>
             <button onClick={handleClick}>Drop in Spartan</button>
         </>
